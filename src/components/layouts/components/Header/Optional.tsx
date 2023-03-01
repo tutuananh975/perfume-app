@@ -8,10 +8,10 @@ interface Prop {
   onNavigateCart?: any;
 }
 
-const Optional: FC<Prop> = ({ icon, textBold, textLight, onNavigateCart }) => {
+const Optional: FC<Prop> = ({ icon, textBold, textLight, onNavigateCart}) => {
   return (
-    <div className="optional flex items-center ml-3">
-      <FontAwesomeIcon className="text-fuchsia-600 text-2xl" icon={icon} onClick = {onNavigateCart}/>
+    <div className="optional flex items-center ml-3 ">
+      <FontAwesomeIcon className="text-fuchsia-600 text-2xl text-black" icon={icon} onClick = {onNavigateCart}/>
       <div className="optional-text ml-2">
         <div className="text-bold font-semibold text-xl leading-none">
           {textBold}

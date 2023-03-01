@@ -18,6 +18,7 @@ const ProductDetail: FC = () => {
   const { responses, doFetch } = useFetchAxios(
     "https://63782c6a5c477765122d0c95.mockapi.io/perfume-products/" + id
   );
+
   const { responses: addCartResponses, doFetch: addCart } = useFetchAxios(
     "https://63782c6a5c477765122d0c95.mockapi.io/users/" + idUser
   );

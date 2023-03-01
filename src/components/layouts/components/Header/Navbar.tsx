@@ -139,11 +139,9 @@ const Navbar: FC = () => {
               </div>
             ) : (
               <div className="px-6 absolute z-10 top-10 w-56 action-sign-in">
-                <Link to= "/customeraccount">
-                  <button className="btn-modal-sign-in text-white py-1.5 w-full bg-blue-081857 rounded">
-                    SIGN IN
-                  </button>
-                </Link>
+                <button className="btn-modal-sign-in text-white py-1.5 w-full bg-blue-081857 rounded">
+                  SIGN IN
+                </button>
                 <div className="pt-1 mb-5 text-md">
                   <div className="pt-1 pb-2 leading-tight">New Customer?</div>
                   <div className="pt-1 pb-2 leading-tight">Order Status</div>
@@ -167,31 +165,30 @@ const Navbar: FC = () => {
             )}
           </li>
 
-          <li className="ml-9 cursor-pointer hidden md:block">
-            <Link to="/help">
-              <div className="nav-right-text-link">HELP</div>
-            </Link>
-          </li>
-          <li className="relative ml-4 cursor-pointer has-triangle hidden md:block">
-            <div>VND</div>
-            <div className="triangle absolute"></div>
-          </li>
-          <li className="ml-4 cursor-pointer hidden sm:block relative">
-            <div onClick={handleNavigateCartPage}>
-              <Optional icon={faCartShopping} textLight="CART" />
-              {isLogin && <TotalItems />}
-            </div>
-          </li>
-        </ul>
-        {isOpenNavbarMobile && (
-          <NavbarMobile
-            onCloseNavbarMobile={() => {
-              setIsOpenNavbarMobile(false);
-            }}
-          />
-        )}
-      </div>
-    </>
+        <li className="ml-9 cursor-pointer hidden md:block">
+          <Link to="/help">
+            <div className="nav-right-text-link">HELP</div>
+          </Link>
+        </li>
+        <li className="relative ml-4 cursor-pointer has-triangle hidden md:block">
+          <div>VND</div>
+          <div className="triangle absolute"></div>
+        </li>
+        <li className="ml-4 cursor-pointer hidden sm:block relative">
+          <Link to="/cart">
+            <Optional icon={faCartShopping} textLight="CART" />
+            {isLogin && <TotalItems />}
+          </Link>
+        </li>
+      </ul>
+      {isOpenNavbarMobile && (
+        <NavbarMobile
+          onCloseNavbarMobile={() => {
+            setIsOpenNavbarMobile(false);
+          }}
+        />
+      )}
+    </div>
   );
 };
 

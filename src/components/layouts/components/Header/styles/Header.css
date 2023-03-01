@@ -12,6 +12,7 @@
  
 .optional {
     cursor: pointer;
+    color: #000
 }
 
 .search-mobile {
@@ -33,8 +34,9 @@
     display: none;
     width: 100%;
     height: 0.125rem;
-    border: 1px solid #cb4bdb;
-    background-color: #cb4bdb;
+    border: 1px solid #000;
+    background-color: #000;
+   
 }
 
 .nav-link-active::before {  
@@ -43,8 +45,9 @@
     top: 100%;
     width: 100%;
     height: 0.125rem;
-    border: 1px solid #cb4bdb;
-    background-color: #cb4bdb;
+    border: 1px solid #000;
+    background-color: #000;
+    
 }
 
 .nav-link-mobile-active {
@@ -71,12 +74,11 @@
 
 .navbar {
     border-top: 1px solid #d3d1d0;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #d3d1d0;
-}
+    padding:16px;
+    }
 
 .nav-right-text-link:hover {
-    border-bottom: 1px solid #cb4bdb;
+    opacity: 0.5;
 }
 
 .action-sign-in {
@@ -119,9 +121,10 @@
 
 @media (min-width: 768px) {
     .navbar-right {
-        border: 2px solid #d3d1d0;
         padding: 8px;
-        border-radius: 6px;
-        border-top-left-radius: 0;
     }
+}
+
+.text-black {
+    color: #000
 }
